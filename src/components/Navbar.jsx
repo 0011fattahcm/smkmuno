@@ -43,6 +43,8 @@ const Navbar = () => {
       submenu: [
         { label: 'Profil', path: '/tentang' },
         { label: 'Visi & Misi', path: '/visi-misi' },
+        { label: 'Struktur Organisasi', path: '/struktur-organisasi' },
+        { label: 'Guru', path: '/guru' },
       ],
     },
     {

@@ -9,19 +9,20 @@ import RX3 from '../assets/rx3.jpeg';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  FaUserGraduate,
-  FaGlobe,
+  FaSitemap,
+  FaClipboardList,
   FaUser,
   FaGraduationCap,
   FaPaperclip,
   FaLaptop,
+  FaPhoneAlt,
 } from 'react-icons/fa';
 
 const cards = [
-  { icon: <FaUserGraduate />, title: 'Enrollment' },
-  { icon: <FaGlobe />, title: 'Overseas Program' },
-  { icon: <FaUser />, title: 'About Us' },
-  { icon: <FaGraduationCap />, title: 'Alumni' },
+  { icon: <FaUser />, title: 'Tentang', href: '/tentang' },
+  { icon: <FaSitemap />, title: 'Struktur Organisasi', href: '/struktur-organisasi' },
+  { icon: <FaClipboardList />, title: 'PPDB', href: '/ppdb' },
+  { icon: <FaPhoneAlt />, title: 'Kontak', href: '/kontak' },
 ];
 
 const features = [
@@ -90,7 +91,7 @@ const Home = () => {
             SMK Muhammadiyah <br className="hidden md:block" /> Sumowono
           </h1>
           <a
-            href="#pendaftaran"
+            href="/ppdb"
             className="font-poppins inline-block bg-blue-950 hover:bg-blue-800 transition text-white font-semibold py-3 px-8 rounded-md text-lg shadow opacity-0 animate-fadeInDown"
             style={{ animationDelay: '1300ms' }}
           >
@@ -98,18 +99,18 @@ const Home = () => {
           </a>
         </div>
       </section>
-
       {/* Card Section */}
       <div data-aos="fade-up" className="relative z-20 w-full -mt-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {cards.map((card, index) => (
-            <div
+            <Link
+              to={card.href}
               key={index}
               className="bg-blue-950 text-white p-2 rounded-2xl text-center flex flex-col items-center justify-center aspect-square shadow-md hover:scale-105 transition duration-300"
             >
               <div className="text-green-400 text-4xl md:text-6xl mb-2">{card.icon}</div>
               <p className="text-sm md:text-lg font-semibold">{card.title}</p>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -231,9 +232,12 @@ const Home = () => {
                 belajar yang nyaman, kami berkomitmen mencetak lulusan yang siap kerja, kompeten,
                 serta memiliki jiwa wirausaha sesuai dengan nilai-nilai Islam.
               </p>
-              <button className="bg-blue-950 text-white px-6 py-2 rounded shadow hover:bg-blue-800 transition duration-200">
+              <a
+                href="/ppdb"
+                className="bg-blue-950 text-white px-6 py-2 rounded shadow hover:bg-blue-800 transition duration-200"
+              >
                 Info Pendaftaran
-              </button>
+              </a>
             </div>
           </div>
         </section>

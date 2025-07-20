@@ -127,7 +127,7 @@ const MainLayout = ({ children }) => {
             </h3>
             <ul className="text-sm space-y-3">
               <li>
-                <Link to="/profil" className="transition-colors duration-300 hover:text-blue-400">
+                <Link to="/tentang" className="transition-colors duration-300 hover:text-blue-400">
                   Tentang Kami
                 </Link>
               </li>
@@ -140,7 +140,7 @@ const MainLayout = ({ children }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/program" className="transition-colors duration-300 hover:text-blue-400">
+                <Link to="/tsm" className="transition-colors duration-300 hover:text-blue-400">
                   Program Kami
                 </Link>
               </li>
